@@ -8,14 +8,14 @@ Wiliam Ford : Numerical Linear Algebra with Applications Using MATLAB
 
 # 일정
 **1주차** OT / MATLAB 프로그램 셋업
+
 **2주차** chapter 1,2
-**3주차** chapter 3
+
+**3주차** chapter 3,4
 
 # 참여 인원 
 🧑‍🤝‍🧑아영
 🧑‍🤝‍🧑소형
 🧑‍🤝‍🧑성민
-🧑‍🤝‍🧑진환
-🧑‍🤝‍🧑규빈
 🧑‍🤝‍🧑훈석
 🧑‍🤝‍🧑민섭
