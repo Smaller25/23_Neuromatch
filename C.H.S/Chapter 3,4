@@ -1,0 +1,119 @@
+a = rosser
+rank(a)
+
+inv(a)
+
+
+d = [1 3 7 1 1 1 5 0; 2 2 6 0 1 7 3 1; 1 1 3 1 0 2 1 0]
+null(d)
+size(null(d),2)
+rank(d)
+a = gallery('clement', 5)
+size(a)
+rank(a)
+5>rank(a)
+b = a; b(1,1) = 1.0e-14;b(2,2) = 1.0e-14;b(3,3) = 1.0e-14
+rank(b)
+inv(b)
+
+a = [1 2 3 4; 5 6 7 8; 9 10 11 12; 13 14 15 16]
+rank(a)
+u = [1 1 0 0 ; 0 1 1 0; 0 0 1 1; 0 0 0 1]
+rank(u)
+rank(a*u)
+rank(u*a)
+a = [1 2 3 4; 5 6 7 8; 9 10 11 12; 13 14 15 16]
+b = [-1 1 2; 4 5 6; 7 8 9; 10 11 12]
+rank(a)
+rank(b)
+rank(a'*a)
+rank(b'*b)
+
+%% 4.21
+
+a = [1 19 -122; 3 57 -366; -1 -19 122]
+b = [1 0.25 -9.25; 3 0.75 -27.75; -17 4.25 216.75]
+null(a)
+null(b)
+rank(a)
+rank(b)
+
+%% 4.22
+a = [246 427 327; 1014 543 443; -342 721 621]
+det(a)
+b = [1 2 3 4; -2 1 -4 3; 3 -4 -1 2; 4 3 -2 -1]
+det(b)
+
+%% 4.23
+syms t
+b = [1 1 2 1; 1 2 3 4; 2 4 7 2*t+6; 2 2 6-t t]
+k = det(b)
+solve(k ==0, t)
+
+%% 4.24
+a = [1 19 -122; 3 57 -366; -1 -19 122]
+b = [1 0.25 -9.25; 3 0.75 -27.75; -17 4.25 216.75]
+
+colspace(sym(a))
+colspace(sym(b))
+
+%% 4.25
+a= [20 -34 8 12 3; -99 17 23 67 10; 1 0 3 9 18; 3 5 0 9 11; 7 1 53 5 55]
+det(sym(a))
+
+%% 4.26
+a = rosser 
+size(a)
+rank(a)
+
+det(a)
+det(sym(rosser))
+
+%% 4.27
+det(rand(5))
+det(rand(10))
+det(rand(25))
+det(rand(50))
+det(rand(100))
+det(rand(250))
+det(rand(400))
+det(rand(500))
+
+%% 4.28
+fibmat = @(n) eye(n) + diag(repmat(sqrt(-1), n-1,1),1) + diag(repmat(sqrt(-1), n-1,1),-1)
+
+spy(fibmat(5))
+figure(2)
+spy(fibmat(10))
+figure(3)
+spy(fibmat(25))
+
+for n = 1:10
+    det(fibmat(n))
+end
+
+%% 4.29
+A = [1 4 3; 2 9 12; -1 -9 3]
+L = [1 0 0; 2 1 0; -1 -5 1]
+U = [1 4 3; 0 1 6; 0 0 36]
+ludet(L,U)
+det(A)
+
+%% 4.30
+det(sym(hilb(5)))
+det(sym(hilb(10)))
+det(sym(hilb(15)))
+det(sym(hilb(25)))
+
+inv(sym(hilb(5)))
+
+det(inv(sym(hilb(5))))
+det(inv(sym(hilb(10))))
+det(inv(sym(hilb(15))))
+det(inv(sym(hilb(25))))
+
+%% 4.31
+a = [-5 -6 -59; 1 1 12; 2 3 22]
+b = [5 0 -6; 8 -11 3; 0 -6 5; -7 3 1; -9 0 1; -6 4 3; -1 -9 1]
+a*b'
+
